@@ -1,40 +1,43 @@
-<!-- OUR-ROOMS-->
-<section class="rooms">
-    <div class="container">
-        <h2 class="title-room"><?= Yii::t("app", "tours")?></h2>
-        <div class="outline"></div>
-        <div class="wrap-rooms">
-            <div class="row">
-                <div id="rooms" class="owl-carousel owl-theme">
-
-                    <div class="item ">
-                        <?php if (!empty($models)): ?>
-                            <?php foreach ($models as $model): ?>
-                                <?php
-                                $img = \app\models\StaticFunctions::getImage('tours', $model->id, $model->images);
-                                ?>
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 ">
-                                    <div class="wrap-box">
-                                        <div class="box-img">
-                                            <img src="<?=$img?>" class="img-responsive"
-                                                 alt="PLuxury Room" title="Luxury Room">
-                                        </div>
-                                        <div class="rooms-content">
-                                            <h4 class="sky-h4"><?=$model['title_'.Yii::$app->language];?></h4>
-                                            <p class="price"><?=$model->price?> UZS</p>
-                                            <a href="<?=yii\helpers\Url::to(['toursview/view', "id"=>$model->id]);?>" class="btn btn-room">Batafsil</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php endforeach;?>
-                        <?php  endif;?>
-
+<div class="bg_white">
+    <div class="container margin_120_95">
+        <div class="title mb-3">
+            <small data-cue="slideInUp">Luxury experience</small>
+            <h2 data-cue="slideInUp" data-delay="200">News & Events</h2>
+        </div>
+        <div class="row justify-content-center home">
+            <div class="item col-xl-4 col-lg-6">
+                <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="300">
+                    <figure><img src="/frontend-files/img/blog-1.jpg" alt="" class="img-fluid"><em>11 Dec</em></figure>
+                    <div class="wrapper">
+                        <small>Travel<span></span></small>
+                        <h2>The vacation and travel Guide for experts in 2022</h2>
+                        <em>Read more</em>
                     </div>
-
-                </div>
+                </a>
+            </div>
+            <div class="item col-xl-4 col-lg-6">
+                <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="400">
+                    <figure><img src="/frontend-files/img/blog-3.jpg" alt="" class="img-fluid"><em>24 Dec</em></figure>
+                    <div class="wrapper">
+                        <small>Event<span></span></small>
+                        <h2>Yayoi Kusama: Infinity Mirror Rooms at Tate Modern</h2>
+                        <em>Read more</em>
+                    </div>
+                </a>
+            </div>
+            <div class="item col-xl-4 col-lg-6">
+                <a href="news-post.html" class="box_contents" data-cue="slideInUp" data-delay="500">
+                    <figure><img src="/frontend-files/img/blog-2.jpg" alt="" class="img-fluid"><em>21 Dec</em></figure>
+                    <div class="wrapper">
+                        <small>Restaurant<span></span></small>
+                        <h2>Best Local Restaurant in 2022</h2>
+                        <em>Read more</em>
+                    </div>
+                </a>
             </div>
         </div>
+        <!--/row -->
+        <p class="text-end"><a href="news-1.html" class="btn_1 outline mt-2" data-cue="slideInUp" data-delay="600">View all News</a></p>
     </div>
-    <!-- /container -->
-</section>
-<!-- END / ROOMS -->
+    <!--/container -->
+</div>

@@ -1,63 +1,119 @@
-<!-- CONTACT -->
-<section class="section-contact">
-    <div class="container">
-        <div class="contact">
-            <div class="row">
-                <div class="col-md-6 col-lg-5">
-                    <div class="text">
-                        <h2><?= Yii::t("app", "contact1")?></h2>
-                        <ul>
-                            <?php if (!empty($models)):?>
-                                <?php foreach ($models as $model) :?>
-                                    <li><i class=" fa ion-ios-location-outline"></i><?=$model->addres?></li>
-                                    <li><i class="fa fa-phone" aria-hidden="true"></i> <?=$model->first_phone?></li>
-                                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i><?=$model->email?></li>
-                                <?php endforeach;?>
-                            <?php endif;?>
-                        </ul>
-                    </div>
+<div class="container margin_120_95" id="booking_section">
+    <div class="row justify-content-between">
+        <div class="col-xl-4">
+            <div data-cue="slideInUp">
+                <div class="title">
+                    <small>Paradise Hotel</small>
+                    <h2>Check Availability</h2>
                 </div>
-                <div class="col-md-6 col-lg-6 col-lg-offset-1">
-                    <div class="contact-form">
-                        <form action="https://landing.engotheme.com/html/skyline/demo/send_mail_contact.php" method="post">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <input type="text" class="field-text" name="name" id="name" placeholder="Ism">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="text" class="field-text" name="email" id="email" placeholder="Email">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="tel" class="field-text" name="email" id="phone" placeholder="Tel">
-                                </div>
-                                <div class="col-sm-6">
-                                    <input type="date" class="field-text" name="email" id="date">
-                                </div>
-                                <div class="col-sm-12">
-                                    <select style="height: 42px; border: 2px solid #232323; width: 100%;  margin-top: 15px; padding-left: 15px;padding-right: 15px;" name="message" id="select" >
-                                        <option disabled selected>Tur kategoriyani tanlang</option>
-                                        <?php if(!empty($tours)):?>
-                                            <?php foreach ($tours as $tour):?>
-                                                <option><?=$tour["title_".Yii::$app->language];?></option>
-                                            <?php endforeach;?>
-                                        <?php endif;?>
-                                    </select>
-                                </div>
-                                <div class="col-sm-6">
-                                    <button type="submit" onclick="booking()" class="btn btn-room">Yuborish</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                <p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu. </p>
+                <p class="phone_element no_borders"><a href="tel://423424234"><i class="bi bi-telephone"></i><span><em>Info and bookings</em>+41 934 121 1334</span></a></p>
             </div>
         </div>
+        <div class="col-xl-7">
+            <div data-cue="slideInUp" data-delay="200">
+                <div class="booking_wrapper">
+                    <p id="daterangepicker-result" class="d-none"></p>
+                    <input id="date_booking" type="hidden">
+                    <div id="daterangepicker-embedded-container" class="embedded-daterangepicker clearfix mb-4"></div>
+
+                </div>
+                <!-- / row -->
+
+            </div>
+        </div>
+        <!-- /col -->
     </div>
-</section>
-<!-- END / CONTACT -->
-<!-- MAP -->
-<div class="section-map">
-    <iframe width="1900" height="595" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=1900&amp;height=595&amp;hl=en&amp;q=%20Namangan+()&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href='https://maps-generator.com/'>Maps Generator</a>
-    </iframe>
+    <!-- /row -->
 </div>
-<!-- END / MAP -->
+<div class="hero medium-height jarallax" data-jarallax data-speed="0.2">
+    <img class="jarallax-img" src="/frontend-files/img/hero_home_2.jpg" alt="">
+    <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+        <div class="container">
+            <small class="slide-animated one">Luxury Hotel Experience</small>
+            <h1 class="slide-animated two">Contact Us</h1>
+        </div>
+    </div>
+</div>
+<!-- /Background Img Parallax -->
+
+<div class="container margin_120_95">
+    <div class="row justify-content-between">
+        <div class="col-xl-4 col-lg-5 order-lg-2">
+            <div class="contact_info">
+                <ul class="clearfix">
+                    <li>
+                        <i class="bi bi-geo-alt"></i>
+                        <h4>Address</h4>
+                        <div>PO Box 97845 Baker st. 567, Los Angeles<br>California - US.</div>
+                    </li>
+                    <li>
+                        <i class="bi bi-envelope-paper"></i>
+                        <h4>Email address</h4>
+                        <p><a href="#0">booking@Paradise.com</a> - <a href="#0">info@Paradise.com</a></p>
+                    </li>
+                    <li>
+                        <i class="bi bi-telephone"></i>
+                        <h4>Telephone</h4>
+                        <div>+ 61 (2) 8093 3402 + 61 (2) 8093 3402<br><small>Monday to Friday 9am - 7pm</small></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xl-7 col-lg-7 order-lg-1">
+            <h3 class="mb-3">Get in Touch</h3>
+            <div id="message-contact"></div>
+            <form method="post" action="http://www.ansonika.com/paradise/phpmailer/contact_template_email.php" id="contactform" autocomplete="off">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="text" id="name_contact" name="name_contact" placeholder="Name">
+                            <label for="name_contact">Name</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="text" id="lastname_contact" name="lastname_contact" placeholder="Last Name">
+                            <label for="lastname_contact">Last name</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="email" id="email_contact" name="email_contact" placeholder="Email">
+                            <label for="email_contact">Email</label>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="text" id="phone_contact" name="phone_contact" placeholder="Telephone">
+                            <label for="phone_contact">Telephone</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- /row -->
+                <div class="form-floating mb-4">
+                    <textarea class="form-control" placeholder="Message" id="message_contact" name="message_contact"></textarea>
+                    <label for="message_contact">Message</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-floating mb-4">
+                            <input class="form-control" type="text" id="verify_contact" name="verify_contact" placeholder="Are you human? 3 + 1 =">
+                            <label for="verify_contact">Are you human? 3 + 1 =</label>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-3"><input type="submit" value="Submit" class="btn_1 outline" id="submit-contact"></p>
+            </form>
+        </div>
+    </div>
+    <!-- /row -->
+</div>
+<!--/container -->
+
+<div class="map_contact">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.4364241114604!2d-73.96780638459853!3d40.774418641731515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c258a29d3847f5%3A0x564dfbba0141774a!2s5th%20Ave%2C%20New%20York%2C%20NY%2C%20Stati%20Uniti!5e0!3m2!1sit!2ses!4v1661414716655!5m2!1sit!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>

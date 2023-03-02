@@ -1,78 +1,57 @@
-<!-- HEADER -->
-<header class="header-sky">
+<div class="layer"></div><!-- Opacity Mask -->
+<header class="reveal_header">
     <div class="container">
-        <!--HEADER-TOP-->
-        <div class="header-top">
-            <div class="header-top-left">
-                <span><i class="ion-android-cloud-outline"></i>18 °C</span>
-                <span><i class="ion-ios-location-outline"></i> 121 King Str, Melbourne Victoria</span>
-                <span><i class="fa fa-phone" aria-hidden="true"></i> 1-548-854-8898</span>
+        <div class="row align-items-center">
+            <div class="col-6">
+<!--                <a href="/" class="logo_normal"><img src="/frontend-files/img/logo.png" width="135" height="45" alt=""></a>-->
+<!--                <a href="/" class="logo_sticky"><img src="/frontend-files/img/logo_sticky.png" width="135" height="45" alt=""></a>-->
             </div>
-            <div class="header-top-right">
-                <ul>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">ENG <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <?php
-                            foreach (Yii::$app->params['language'] as $key => $value){
-                                echo " <li><a href='".\yii\helpers\Url::to(['site/ozgar',"til"=>$key])."'>".$value."</a></li>";
-                            }
-                            ?>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="col-6">
+                <nav>
+                    <ul>
+                        <li><a href="#booking_section" class="btn_1 btn_scrollto">login</a></li>
+                        <li>
+                            <div class="hamburger_2 open_close_nav_panel">
+                                <div class="hamburger__box">
+                                    <div class="hamburger__inner"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
-        <!-- END/HEADER-TOP -->
-    </div>
-    <!-- MENU-HEADER -->
-    <div class="menu-header">
-        <nav class="navbar navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header ">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar "></span>
-                        <span class="icon-bar "></span>
-                        <span class="icon-bar "></span>
-                    </button>
-                    <a class="navbar-brand" href="file:///E:/Xampp/htdocs/skyline/index.html" title="Skyline"><img src="frontend-files/images/Home-1/logo.png" alt="#"></a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <?php if(!empty($menues)):?>
-                            <?php foreach ($menues as $menue): ?>
-                                <li><a href="<?=$menue->link?>"><?=$menue['name_'.Yii::$app->language];?></a></li>
-                            <?php endforeach;?>
-                        <?php endif;?>
-                    </ul>
-                </div>
-            </div>
+    </div><!-- /container -->
+</header><!-- /Header -->
+<div class="nav_panel">
+    <a href="#" class="closebt open_close_nav_panel"><i class="bi bi-x"></i></a>
+<!--    <div class="logo_panel"><img src="frontend-files/img/logo_sticky.png" width="135" height="45" alt=""></div>-->
+    <div class="sidebar-navigation">
+        <nav>
+            <ul class="level-1">
+                <?php if(!empty($menues)):?>
+                     <?php foreach ($menues as $menue): ?>
+                        <li class="parent"><a href="<?=$menue->link?>"><?=$menue['name_'.Yii::$app->language];?></a></li>
+                    <?php endforeach;?>
+                <?php endif;?>
+            </ul>
+            <!-- /panel_footer -->
         </nav>
     </div>
-    <!-- END / MENU-HEADER -->
-</header>
-<!-- END-HEADER -->
-<!-- SLIDER -->
-<section class="section-slider height-v">
-    <div id="index12" class="owl-carousel  owl-theme">
-        <div class="item">
-            <img alt="Third slide" src="frontend-files/images/Home-1/Slider-v1.jpg" class="img-responsive">
-            <div class="carousel-caption">
-                <h1><?= Yii::t("app", "slider1")?></h1>
-                <p><span class="line-t"></span><?= Yii::t("app", "sliders1")?> <span class="line-b"></span></p>
-            </div>
-        </div>
-        <div class="item">
-            <img alt="Third slide" src="frontend-files/images/Home-2/Slider-v2.jpg" class="img-responsive">
-            <div class="container">
-                <div class="carousel-caption ">
-                    <h1 class="v2"><?= Yii::t("app", "slider2")?></h1>
-                    <p class="p-v2"><span class="line-t"></span><?= Yii::t("app", "sliders2")?><span class="line-b"></span></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!-- /sidebar-navigation -->
+</div>
 
-</section>
-<!-- END / SLIDER -->
+<div class="hero full-height jarallax" data-jarallax-video="mp4:./frontend-files/video/sunset.mp4,webm:./frontend-files/video/sunset.webm,ogv:./frontend-files/video/sunset.ogv" data-speed="0.2">
+    <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.5)">
+        <div class="container">
+            <small class="slide-animated one">Luxury Hotel Experience</small>
+            <h3 class="slide-animated two">A unique Experience<br>where to stay</h3>
+        </div>
+        <div class="mouse_wp slide-animated four">
+            <a href="#first_section" class="btn_scrollto">
+                <div class="mouse"></div>
+            </a>
+        </div>
+        <!-- /mouse_wp -->
+    </div>
+</div>

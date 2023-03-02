@@ -22,13 +22,22 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body>
+<body class="datepicker_mobile_full">
+
     <?php $this->beginBody() ?>
 
+    <div id="preloader">
+        <div data-loader="circle-side"></div>
+    </div><!-- /Page Preload -->
+
+
+
+    <main>
         <?= \app\widgets\Navigation::widget()?>
-<!--        --><?//= \app\widgets\Slider::widget()?>
+
         <?= $content ?>
-        <?=\app\widgets\Footer::widget()?>
+    </main>
+        <?= \app\widgets\Footer::widget()?>
     <?php $this->endBody() ?>
 
 </body>
