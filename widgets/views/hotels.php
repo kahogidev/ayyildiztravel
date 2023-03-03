@@ -12,50 +12,50 @@
 
     <div class="row_list_version_2 inverted">
         <div class="row g-0 align-items-center">
+
+
             <div class="col-xl-8 order-xl-2">
                 <div class="owl-carousel owl-theme carousel_item_1 kenburns rounded-img">
-                    <div class="item">
-                        <a data-fslightbox="gallery_4" data-type="image" href="img/rooms/4.jpg"><img src="/frontend-files/img/rooms/4.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a data-fslightbox="gallery_4" data-type="image" href="img/rooms/opt_4.jpg"><img src="/frontend-files/img/rooms/opt_4.jpg" alt=""></a>
-                    </div>
-                    <div class="item">
-                        <a data-fslightbox="gallery_4" data-type="image" href="img/rooms/opt_7.jpg"><img src="/frontend-files/img/rooms/opt_7.jpg" alt=""></a>
-                    </div>
+                    <?php if (!empty($models)):?>
+                        <?php foreach ($models as $model):?>
+                        <?php $img = app\models\StaticFunctions::getImage('hotel',$model->id,$model->images)?>
+                            <div class="item">
+                                <a data-fslightbox="gallery_4" data-type="image" href="img/rooms/4.jpg"><img src="<?=$img?>" alt=""></a>
+                            </div>
+                        <?php endforeach;?>
+                    <?php endif;?>
                 </div>
+
+
                 <!-- /carousel -->
             </div>
-            <div class="col-xl-4 order-xl-1">
-                <div class="box_item_info" data-jarallax-element="-25">
-                    <small>From $260/night</small>
-                    <h2>Junior Suite</h2>
-                    <p>Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.</p>
-                    <div class="facilities clearfix">
-                        <ul>
-                            <li>
-                                <i class="bi bi-house"></i> King Size Bed
-                            </li>
-                            <li>
-                                <i class="bi bi-tv"></i> 32 Inc TV
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="box_item_footer d-flex align-items-center justify-content-between">
-                        <a href="#0" class="btn_4 learn-more">
-                                    <span class="circle">
-                                        <span class="icon arrow"></span>
-                                    </span>
-                            <span class="button-text">Book Now</span>
-                        </a>
-                        <a href="room-details.html" class="animated_link">
-                            <strong>Details</strong>
-                        </a>
+            <?php if (!empty($models)):?>
+                      <div class="col-xl-4 order-xl-1">
+                        <div class="box_item_info" data-jarallax-element="-25">
+                            <small></small>
+                            <h2><?=$model->name?></h2>
+                            <p>Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.</p>
+                            <div class="facilities clearfix">
+                                <ul>
+                                    <li>
+                                        <i class="bi bi-house"></i> King Size Bed
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-tv"></i> 32 Inc TV
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                            <div class="box_item_footer d-flex align-items-center justify-content-between">
+
                     </div>
                     <!-- /box_item_footer -->
                 </div>
                 <!-- /box_item_info -->
             </div>
+            <?php endif;?>
+
             <!-- /col -->
         </div>
         <!-- /row -->

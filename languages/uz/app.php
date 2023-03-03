@@ -1,7 +1,7 @@
 <?php
 return[
 
-    "book" => "Buyurtma berish",
+    "lang" => "O'zbekcha",
 
 
 //    slider page

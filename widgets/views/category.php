@@ -7,42 +7,23 @@
         <h2 data-cue="slideInUp" data-delay="200">Rooms & Suites</h2>
     </div>
     <div class="row justify-content-center add_bottom_90" data-cues="slideInUp" data-delay="300">
-        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
-            <a href="room-details.html" class="box_cat_rooms">
-                <figure>
-                    <div class="background-image" data-background="url(/frontend-files/img/rooms/1.jpg)"></div>
-                    <div class="info">
-                        <small>From $250/night</small>
-                        <h3>Junior Suite</h3>
-                        <span>Read more</span>
+        <?php if (!empty($models)): ?>
+            <?php foreach ($models as $model):?>
+                <?php
+                    $img = app\models\StaticFunctions::getImage('tours_category', $model->id, $model->images);
+                ?>
+                    <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12">
+                        <a href="<?=\yii\helpers\Url::to(["tours/view","id"=>$model->id])?>" class="box_cat_rooms">
+                            <figure>
+                                <div class="background-image" data-background="url(<?=$img?>)"></div>
+                                <div class="info">
+                                    <span style="font-size: 25px"><?=$model['name_'.Yii::$app->language];?></span>
+                                </div>
+                            </figure>
+                        </a>
                     </div>
-                </figure>
-            </a>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-            <a href="room-details.html" class="box_cat_rooms">
-                <figure>
-                    <div class="background-image" data-background="url(/frontend-files/img/rooms/2.jpg)"></div>
-                    <div class="info">
-                        <small>From $190/night</small>
-                        <h3>Deluxe Room</h3>
-                        <span>Read more</span>
-                    </div>
-                </figure>
-            </a>
-        </div>
-        <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-            <a href="room-details.html" class="box_cat_rooms">
-                <figure>
-                    <div class="background-image" data-background="url(/frontend-files/img/rooms/3.jpg)"></div>
-                    <div class="info">
-                        <small>From $240/night</small>
-                        <h3>Superior Room</h3>
-                        <span>Read more</span>
-                    </div>
-                </figure>
-            </a>
-        </div>
+            <?php endforeach;?>
+        <?php endif;?>
         <p class="text-end"><a href="room-list-1.html" class="btn_1 outline mt-2">View all Rooms</a></p>
     </div>
     <!-- /row-->

@@ -1,4 +1,6 @@
-<div class="container margin_120_95" id="booking_section">
+<?php if (!empty($models)):?>
+    <?php foreach ($models as $model):?>
+        <div class="container margin_120_95" id="booking_section">
     <div class="row justify-content-between">
         <div class="col-xl-4">
             <div data-cue="slideInUp">
@@ -7,7 +9,7 @@
                     <h2>Check Availability</h2>
                 </div>
                 <p>Mea nibh meis philosophia eu. Duis legimus efficiantur ea sea. Id placerat tacimates definitionem sea, prima quidam vim no. Duo nobis persecuti cu. </p>
-                <p class="phone_element no_borders"><a href="tel://423424234"><i class="bi bi-telephone"></i><span><em>Info and bookings</em>+41 934 121 1334</span></a></p>
+                <p class="phone_element no_borders"><a href="tel://423424234"><i class="bi bi-telephone"></i><span><em>Info and bookings</em><?=$model->first_phone?></span></a></p>
             </div>
         </div>
         <div class="col-xl-7">
@@ -26,6 +28,8 @@
     </div>
     <!-- /row -->
 </div>
+    <?php endforeach;?>
+<?php endif;?>
 <div class="hero medium-height jarallax" data-jarallax data-speed="0.2">
     <img class="jarallax-img" src="/frontend-files/img/hero_home_2.jpg" alt="">
     <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.5)">
@@ -40,41 +44,44 @@
 <div class="container margin_120_95">
     <div class="row justify-content-between">
         <div class="col-xl-4 col-lg-5 order-lg-2">
-            <div class="contact_info">
+            <?php if (!empty($models)):?>
+                <?php foreach ($models as $model):?>
+                    <div class="contact_info">
                 <ul class="clearfix">
                     <li>
                         <i class="bi bi-geo-alt"></i>
                         <h4>Address</h4>
-                        <div>PO Box 97845 Baker st. 567, Los Angeles<br>California - US.</div>
+                        <div><?=$model->addres?></div>
                     </li>
                     <li>
                         <i class="bi bi-envelope-paper"></i>
-                        <h4>Email address</h4>
-                        <p><a href="#0">booking@Paradise.com</a> - <a href="#0">info@Paradise.com</a></p>
-                    </li>
+                        <h4><?=$model->email?></h4>
+                        </li>
                     <li>
                         <i class="bi bi-telephone"></i>
                         <h4>Telephone</h4>
-                        <div>+ 61 (2) 8093 3402 + 61 (2) 8093 3402<br><small>Monday to Friday 9am - 7pm</small></div>
+                        <div><?=$model->first_phone?><br><small>Monday to Friday 9am - 7pm</small></div>
                     </li>
                 </ul>
             </div>
+                <?php endforeach;?>
+            <?php endif;?>
         </div>
         <div class="col-xl-7 col-lg-7 order-lg-1">
             <h3 class="mb-3">Get in Touch</h3>
             <div id="message-contact"></div>
-            <form method="post" action="http://www.ansonika.com/paradise/phpmailer/contact_template_email.php" id="contactform" autocomplete="off">
+            <form method="post" action="" autocomplete="on">
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-floating mb-4">
-                            <input class="form-control" type="text" id="name_contact" name="name_contact" placeholder="Name">
-                            <label for="name_contact">Name</label>
+                            <input class="form-control" type="text" id="name" name="name_contact" placeholder="Ism">
+                            <label for="name_contact">Ism</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-floating mb-4">
-                            <input class="form-control" type="text" id="lastname_contact" name="lastname_contact" placeholder="Last Name">
-                            <label for="lastname_contact">Last name</label>
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Email">
+                            <label for="lastname_contact">Email</label>
                         </div>
                     </div>
                 </div>
@@ -82,31 +89,28 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <div class="form-floating mb-4">
-                            <input class="form-control" type="email" id="email_contact" name="email_contact" placeholder="Email">
-                            <label for="email_contact">Email</label>
+                            <input class="form-control" type="tel" id="phone" name="phone" placeholder="Phone">
+                            <label for="email_contact">Phone</label>
                         </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="form-floating mb-4">
-                            <input class="form-control" type="text" id="phone_contact" name="phone_contact" placeholder="Telephone">
-                            <label for="phone_contact">Telephone</label>
+                            <input class="form-control" type="date" id="date" name="phone_contact">
                         </div>
                     </div>
                 </div>
                 <!-- /row -->
                 <div class="form-floating mb-4">
-                    <textarea class="form-control" placeholder="Message" id="message_contact" name="message_contact"></textarea>
-                    <label for="message_contact">Message</label>
+                    <select style="height: 42px; border: 1px solid #f1f1f1; width: 100%;  margin-top: 15px; padding-left: 15px;padding-right: 15px;" name="message" id="select" >
+                        <option disabled selected>Tur kategoriyani tanlang</option>
+                        <?php if(!empty($tours)):?>
+                            <?php foreach ($tours as $tour):?>
+                                <option><?=$tour["title_".Yii::$app->language];?></option>
+                            <?php endforeach;?>
+                        <?php endif;?>
+                    </select>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-floating mb-4">
-                            <input class="form-control" type="text" id="verify_contact" name="verify_contact" placeholder="Are you human? 3 + 1 =">
-                            <label for="verify_contact">Are you human? 3 + 1 =</label>
-                        </div>
-                    </div>
-                </div>
-                <p class="mt-3"><input type="submit" value="Submit" class="btn_1 outline" id="submit-contact"></p>
+                <p class="mt-3"><input type="submit"  onclick="booking()" class="btn_1 outline"></p>
             </form>
         </div>
     </div>

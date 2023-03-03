@@ -1,5 +1,6 @@
 <?php
 return[
+    "lang" => "English",
     "book" => "Book now",
     "tour" => "travel",
 

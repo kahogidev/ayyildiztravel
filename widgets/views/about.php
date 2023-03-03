@@ -3,8 +3,8 @@
         <div class="row justify-content-between flex-lg-row-reverse align-items-center">
             <div class="col-lg-5">
                 <div class="parallax_wrapper">
-                    <img src="/frontend-files/img/home_2.jpg" alt="" class="img-fluid rounded-img">
-                    <div data-cue="slideInUp" class="img_over"><span data-jarallax-element="-30"><img src="/frontend-files/img/home_1.jpg" alt="" class="rounded-img"></span></div>
+                    <img src="/frontend-files/img/home_2.jpg" style="height: 500px; object-fit: cover" alt="" class="img-fluid rounded-img">
+                    <div data-cue="slideInUp" class="img_over"><span data-jarallax-element="-30"><img  src="/frontend-files/img/home_1.jpg" alt="" class="rounded-img"></span></div>
                 </div>
             </div>
             <div class="col-lg-5">

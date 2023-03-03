@@ -9,45 +9,24 @@
                         <h2>What Clients Says</h2>
                     </div>
                     <div class="carousel_testimonials owl-carousel owl-theme nav-dots-orizontal">
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="/frontend-files/img/testimonial_1.jpg" alt="" class="img-circle">
-                                    </figure>
-                                    <h4>Roberta<small>12 Oct</small></h4>
+
+                        <?php if (!empty($models)):?>
+                            <?php foreach ($models as $model):?>
+
+                                <div>
+                                    <div class="box_overlay">
+                                        <div  class="pic">
+                                            <h4 style="margin-left: -50px"><?=$model->name?><small><?=$model->email?></small></h4>
+                                        </div>
+                                        <div class="comment">
+                                            <?=$model['comment_'.Yii::$app->language];?>
+                                        </div>
+                                    </div>
+                                    <!-- End box_overlay -->
                                 </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud."
-                                </div>
-                            </div>
-                            <!-- End box_overlay -->
-                        </div>
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="/frontend-files/img/testimonial_1.jpg" alt="" class="img-circle">
-                                    </figure>
-                                    <h4>Roberta<small>2 Nov</small></h4>
-                                </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud."
-                                </div>
-                            </div>
-                            <!-- End box_overlay -->
-                        </div>
-                        <div>
-                            <div class="box_overlay">
-                                <div class="pic">
-                                    <figure><img src="/frontend-files/img/testimonial_1.jpg" alt="" class="img-circle">
-                                    </figure>
-                                    <h4>Roberta<small>3 Dec</small></h4>
-                                </div>
-                                <div class="comment">
-                                    "Mea ad postea meliore fuisset. Timeam repudiare id eum, ex paulo dictas elaboraret sed, mel cu unum nostrud."
-                                </div>
-                            </div>
-                            <!-- End box_overlay -->
-                        </div>
+
+                            <?php endforeach;?>
+                        <?php endif;?>
                     </div>
                     <!-- End carousel_testimonials -->
                 </div>

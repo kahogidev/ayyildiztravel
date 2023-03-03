@@ -1,4 +1,51 @@
+<style>
+    .dropbtn {
+        border: none;
+        color: #fff;
+        background: #978667;
+        outline: none;
+        cursor: pointer;
+        display: inline-flex;
+        text-decoration: none;
+        padding:10px!important;
+        font-weight: 600;
+        border-radius: 25px ;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black!important;
+        padding: 12px 10px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown:hover .dropbtn {
+        background-color: #222a30;
+        transition: all ease 1s!important;
+    }
+</style>
 <div class="layer"></div><!-- Opacity Mask -->
+
 <header class="reveal_header">
     <div class="container">
         <div class="row align-items-center">
@@ -8,7 +55,23 @@
             </div>
             <div class="col-6">
                 <nav>
+
+
                     <ul>
+                        <li>
+                            <div class="dropdown">
+                                <button class="dropbtn"><?=Yii::t("app", "lang") ?></button>
+                                <div class="dropdown-content">
+                                    <?php
+                                    foreach (Yii::$app->params['language'] as $key => $value){
+                                        echo " <a style='font-color:black' href='".\yii\helpers\Url::to(['site/ozgar',"til"=>$key])."'>".$value."</a>";
+                                    }
+                                    ?>
+
+                                </div>
+                            </div>
+                        </li>
+
                         <li><a href="#booking_section" class="btn_1 btn_scrollto">login</a></li>
                         <li>
                             <div class="hamburger_2 open_close_nav_panel">
