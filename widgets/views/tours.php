@@ -1,8 +1,7 @@
 <div class="bg_white">
     <div class="container margin_120_95">
         <div class="title mb-3">
-            <small data-cue="slideInUp">Luxury experience</small>
-            <h2 data-cue="slideInUp" data-delay="200">News & Events</h2>
+            <h2 data-cue="slideInUp" data-delay="200"><?= Yii::t("app", "tours")?></h2>
         </div>
         <div class="row justify-content-center home">
             <?php if (!empty($models)): ?>
@@ -16,7 +15,7 @@
                                         <small style="color: #0b0d0f"><?=$model->price?> UZS<span></span></small>
                                         <h2><?=$model['title_'.Yii::$app->language];?></h2>
                                         <h6><?=$model['description_'.Yii::$app->language];?></h6>
-                                        <em>Batafsil</em>
+                                        <em><?= Yii::t("app", "more")?></em>
                                     </div>
                                 </a>
                             </div>

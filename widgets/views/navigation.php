@@ -72,7 +72,7 @@
                             </div>
                         </li>
 
-                        <li><a href="#booking_section" class="btn_1 btn_scrollto">login</a></li>
+                        <li><a href="<?=\yii\helpers\Url::to(["admin/"])?>" class="btn_1 btn_scrollto">Login</a></li>
                         <li>
                             <div class="hamburger_2 open_close_nav_panel">
                                 <div class="hamburger__box">
@@ -107,8 +107,8 @@
 <div class="hero full-height jarallax" data-jarallax-video="mp4:./frontend-files/video/sunset.mp4,webm:./frontend-files/video/sunset.webm,ogv:./frontend-files/video/sunset.ogv" data-speed="0.2">
     <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero" data-opacity-mask="rgba(0, 0, 0, 0.5)">
         <div class="container">
-            <small class="slide-animated one">Luxury Hotel Experience</small>
-            <h3 class="slide-animated two">A unique Experience<br>where to stay</h3>
+            <small class="slide-animated one"></small>
+            <h3 class="slide-animated two"><?= Yii::t("app", "sliders1")?></h3>
         </div>
         <div class="mouse_wp slide-animated four">
             <a href="#first_section" class="btn_scrollto">

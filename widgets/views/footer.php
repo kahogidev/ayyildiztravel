@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row move_content">
             <div class="col-lg-4 col-md-12">
-                <h5>Contacts</h5>
+                <h5><?= Yii::t("app", "contactt")?></h5>
                 <?php if (!empty($contacts)):?>
                     <?php foreach ($contacts as $contact):?>
                         <ul>
@@ -18,7 +18,7 @@
                 <?php endif;?>
             </div>
             <div class="col-lg-3 col-md-6 ms-lg-auto">
-                <h5>Explore</h5>
+                <h5><?= Yii::t("app", "menulinks")?></h5>
                 <div class="footer_links">
 
                     <ul>
@@ -37,7 +37,7 @@
                     <h5>Ayyildiz Travel</h5>
                     <div id="message-newsletter"></div>
 
-                    <p>Receive latest offers and promos without spam. You can cancel anytime.</p>
+                    <p><?= Yii::t("app", "about2")?></p>
                 </div>
             </div>
         </div>

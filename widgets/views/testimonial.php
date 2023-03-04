@@ -5,8 +5,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="title white">
-                        <small class="mb-1">Testimonials</small>
-                        <h2>What Clients Says</h2>
+                        <h2><?= Yii::t("app", "test_info")?></h2>
                     </div>
                     <div class="carousel_testimonials owl-carousel owl-theme nav-dots-orizontal">
 

@@ -2,8 +2,7 @@
 
     <div class="wrapper opacity-mask d-flex align-items-center justify-content-center text-center animate_hero is-transitioned" data-opacity-mask="rgba(0, 0, 0, 0.5)" style="background-color: rgba(0, 0, 0, 0.5);">
         <div class="container">
-            <small class="slide-animated one">Luxury Hotel Experience</small>
-            <h1 class="slide-animated two">Our Rooms &amp; Suites</h1>
+            <h1 class="slide-animated two"><?= Yii::t("app", "hotels")?></h1>
         </div>
     </div>
     <div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; z-index: -100; clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0px 100%);"><img class="jarallax-img" src="/frontend-files/img/rooms/2.jpg" alt="" style="object-fit: cover; object-position: 50% 50%; max-width: none; position: fixed; top: 0px; left: 0px; width: 1349px; height: 305.5px; overflow: hidden; pointer-events: none; transform-style: preserve-3d; backface-visibility: hidden; margin-top: 9.75px; transform: translate3d(0px, -9.75px, 0px);"></div></div>
@@ -34,14 +33,14 @@
                         <div class="box_item_info" data-jarallax-element="-25">
                             <small></small>
                             <h2><?=$model->name?></h2>
-                            <p>Beautiful design with modern furnishings including a glamorous bay window with your own private view of Lucerne.</p>
+                            <p><?= Yii::t("app", "hotels1")?></p>
                             <div class="facilities clearfix">
                                 <ul>
                                     <li>
-                                        <i class="bi bi-house"></i> King Size Bed
+                                        <i class="bi bi-house"></i> <?= Yii::t("app", "hotels3")?>
                                     </li>
                                     <li>
-                                        <i class="bi bi-tv"></i> 32 Inc TV
+                                        <i class="bi bi-tv"></i> <?= Yii::t("app", "hotels4")?>
                                     </li>
                                 </ul>
                             </div>

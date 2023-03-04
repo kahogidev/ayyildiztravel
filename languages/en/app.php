@@ -1,120 +1,87 @@
 <?php
 return[
-    "lang" => "English",
-    "book" => "Book now",
-    "tour" => "travel",
-
-
-//    slider page
-    "awesome" => "Awesome",
-    "travel" => "Are you ready to travel?",
-    'show' => "We show you",
-    "showyou" => "interesting  travel",
-
-
-//    Services page
-    "servicinfo" => "Our services",
-    "extreme" => "Extreme tours",
-    "extremep" => "We offer you extremal trips in different countries",
-    "cost" => "Affordable prices",
-    "costp" => "The way you want to pay. Cheap and convenient",
-    "online" => "Order online",
-    "onlinep" => "You can get an online ticket for the trip through our website",
-
-
-
-
-    //    About page
-    "aboutinfo" => "About us",
-    "best" => "The best travel agency",
-    "aboutDis" => "discover the",
-    "aboutW" => "World",
-    "aboutg" => "with our guide",
-    "aboutp1" => "You can choose any country with good tourism. We will create all the comforts for you. We have adventure tours for you at affordable prices.",
-    "aboutp2" => "Our hotels are very convenient and affordable for you",
-    "experience" => "Years of Experience",
-    "tourdes" => "tour destinations",
-    'information' => "For information",
-
-
-
-//  Gallery info
-    "galleryinfo" => "Our Gallery",
-
-
-
-//    destination page
-    "choosedes" => "Choose your destination",
-
-
-
-    //    Tours page
-    "tours" => "tour packages",
-    "popular" => "popular",
-    "poptours" => "Tours",
-
-    //    Counter page
-    "flight" => "Flight booking",
-    "amazing" => "Amazing tour",
-    "cruises" => "Cruises Booking",
-    "ticket" => "Ticket booking",
-
-
-    //    Popular page
-    "most" => "most poular",
-    "mosttravel" => "travel",
-    "country" => "countries",
+    "lang" => "Uzbek",
     "more" => "More",
-    "italy" => "Italya, Yevropa",
-    "france" => "France, Europe",
-    "italyp"  => "A country located in southern Europe, in the Mediterranean basin. The Apennine Peninsula included Sicily, Sardinia and other small islands.",
-    "francep" => "A country in Western Europe. It is surrounded by the Atlantic Ocean and the English Channel to the west and north, and the Mediterranean Sea to the south.",
+
+
+// slider page
+
+    "sliders1" => "TAKE A FUN TRIP WITH US.",
+
+
+// Services page
+    "services1" => "Our Services",
+    "service1" => "Hotels",
+    "service1t" => "The most convenient and affordable hotels during the trip",
+    "service2" => "Popular Addresses",
+    "service2t" => "Travels to the most famous places of our country and the world",
+    "service3" => "Security ",
+    "service3t" => "Your safety is ensured during the trip",
+    "service4" => "Trusted Service",
+    "service4t" => "A reliable service to prove your decision is correct",
+
+
+    // About page
+    "about" => "About Us",
+    "about3" => "UNIQUE MOMENTS",
+    "about1" => "HAVE UNBREAKABLE ADVENTURES AROUND OUR COUNTRY AND WORLD",
+    "about2" => "Plan a quality and enjoyable trip with a quality and reliable travel agency!!!",
 
 
 
-//     blog page
-    "travelblog" => "Travel blog",
-    "travelexp" => "Travel",
-    "exper" => "experience",
-    "imgp1" => "Practical information for traveling to Egypt",
-    "imgp2" => "Most Popular Yacht Charter Routes",
-    "imgp3" => "Tips Towards a Flawless Honeymoon",
-    "imgp4" => "5 things you can not miss in Miami",
-    "imgp5" => "Family Adventure Tours for Teens & Kids",
-    "imgp6" => "Small group tours with flights from the USA",
 
-    //    Testimonial page
-    'test_info' => "What Our Clients Say About Us",
-    'testmon' => "Customers feedback",
-    "testinfo" => "We Provide Top Destinations Expecially For You Book Now and Enjoy!",
-    "testcall" => "call now",
-    "testcall1" => "Call us, it's toll-free.",
+    "res" => "Restaurants",
+    "res_t" => "During the trip, you can order from the most famous restaurants in the world, visit family and enjoy delicious food.",
+    "art1" => "Arts and Culture",
+    "art2" => "The best part of travel is enjoying seeing and learning about the art and culture of the destinations you visit and having the opportunity to expand your worldview.",
+
+    //hotels
+    "hotels" => "Hotels",
+    "hotels1" => "Relax in world-famous hotels at convenient and affordable prices.",
+    "hotels3" => "Luxury Rooms",
+    "hotels4" => "Latest Technologies",
 
 
 
-    //    Contact page
-    "contactinfo" => "Connection",
-    'name' => "Name",
-    'surname' => "Surname",
-    'email' => "E-mail",
+
+// Tours page
+    "tours" => "Tour Packages",
+
+// destination page
+    "category" => "Type package categories",
+
+
+// connect
+
+    "contact1" => "Contacts",
+
+
+// Hotel page
+
+
+// Testimonial page
+    'test_info' => "What our customers think about us",
+
+
+// Contact page
+    "contactinfo" => "Book your trip now",
+    "schedule1" => "Monday-Saturday 9:00-18:00",
+    'name'=>"Name",
+    'email' => "Email Address",
     'tel' => "Phone",
-    'message' => "Your Message",
-    'send' => "Send message",
-    'category1' => "Tour Category",
-    "data" => "date.month.year",
-    "location" => "Location",
+    'category1' => "Select type package",
+    "location" => "Address",
     "contactp" => "Contact us and travel the world.",
+    "contactt" => "Contact Us",
 
 
-//    Footer page
-    "callus" => "For communication",
-    "addres" => "Our address",
-    "writeus" => "Write to us",
-    "infolinks" => "You can reach us on our social network addresses through the following links",
+
+// Footer page
+    "callus" => "For Communication",
+    "writeus" => "Our email address",
+    "address" => "Our Address",
+    "infolinks" => "You can access our social network addresses through the following links",
     "menulinks" => "Sections",
-    "subscribe" => "Subscribe",
-    "subsinfo" => "Sign up for our monthly blogletter to stay informed about travel and tours",
-
 ]
 
 ?>

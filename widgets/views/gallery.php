@@ -10,10 +10,8 @@
             </div>
             <div class="col-lg-5">
                 <div class="title">
-                    <small>Local Amenities</small>
-                    <h3>Restaurants</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p><a href="about.html" class="btn_1 mt-1 outline">Read more</a></p>
+                    <h2><?= Yii::t("app", "res")?></h2>
+                    <p style="font-size: 20px!important;"><?= Yii::t("app", "res_t")?></p>
                 </div>
             </div>
         </div>
@@ -28,10 +26,8 @@
             </div>
             <div class="col-lg-5 order-lg-1">
                 <div class="title">
-                    <small>Local Amenities</small>
-                    <h3>Art & Culture</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p><a href="about.html" class="btn_1 mt-1 outline">Read more</a></p>
+                    <h2><?= Yii::t("app", "art1")?></h2>
+                    <p style="font-size: 20px"><?= Yii::t("app", "art2")?>
                 </div>
             </div>
         </div>

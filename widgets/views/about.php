@@ -10,12 +10,11 @@
             <div class="col-lg-5">
                 <div class="intro">
                     <div class="title">
-                        <small>About us</small>
-                        <h2>Tailored services and the experience of unique holidays</h2>
+                        <small><?= Yii::t("app", "about")?></small>
+                        <h2><?= Yii::t("app", "about1")?></h2>
                     </div>
-                    <p class="lead">Vivamus volutpat eros pulvinar velit laoreet, sit amet egestas erat dignissim.</p>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <p><em>Maria...the Owner</em></p>
+                    <p class="lead"><?= Yii::t("app", "about2")?></p>
+                    <p><em>Ayyildiz Travel...</em></p>
                 </div>
             </div>
         </div>
@@ -32,8 +31,7 @@
         </div>
         <div class="pinned_over_content">
             <div class="title white">
-                <small data-cue="slideInUp" data-delay="200">Luxury Hotel Experience</small>
-                <h2 data-cue="slideInUp" data-delay="300">Enjoy in a very<br> Immersive Relax</h2>
+                <h2 data-cue="slideInUp" data-delay="300"><?= Yii::t("app", "about3")?></h2>
             </div>
         </div>
     </div>

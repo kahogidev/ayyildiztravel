@@ -2,46 +2,51 @@
 return[
 
     "lang" => "O'zbekcha",
+    "more" => "Batafsil",
 
 
 //    slider page
-    "slider1" => "Sarguzashtli Sayohatlar",
-    "sliders1" => "Hoziroq buyurtma bering",
-    "slider2" => "Dunyo bo'ylab sayohat qiling!",
-    "sliders2" => "Hoziroq buyurtma bering",
+
+    "sliders1" => "BIZ BILAN KO'NGIL OCHAR SAYOHATLARGA CHIQING.",
 
 
 //    Services page
-    "service1" => "Hamyonbop Mehmonxonalar",
-    "service2" => "Betakror Manzaralar",
-    "service3" => "Doimiy aloqa",
-    "service4" => "Ajoyib xizmat ko'rsatish",
-    "service5" => "Mazali taomlar",
-    "service6" => "Taxi xizmati",
+    "services1" => "Bizning xizmatlar",
+    "service1" => "Mehmonxonalar",
+    "service1t" => "Sayohat davomida eng qulay va hamyonbop mehmonxonalar",
+    "service2" => "Mashxur Manzillar",
+    "service2t" => "Yurtimiz va dunyodagi eng mashxur joylarga sayohatlar",
+    "service3" => "Xavfsizlik ",
+    "service3t" => "Safar davomida sizning xavfsizligingiz ta'minlanadi",
+    "service4" => "Ishonchli xizmat",
+    "service4t" => "Qaroringiz to'g'riligini isbotlash uchun ishonchli xizmat",
 
 
 //    About page
     "about" => "Biz haqimizda",
-    "about1" => "Yaxshi turizmga ega har qanday mamlakatni tanlashingiz mumkin. Biz siz uchun barcha qulayliklarni yaratib beramiz. Bizda  siz uchun qulay narxlar sarguzashtga boy sayohatlar mavjud. Bizning mehmonxonalarimiz siz uchun juda qulay va xamyonbob",
-    "about2" => "Siz uchun ma'qul bo'lgan tur paketni tanlash va sayohatga buyurtma berish orqali siz orzuyingizdagi sarguzashtlarga guvoh bo'lishingiz mumkin",
+    "about3" => "BETAKROR LAHZALAR",
+    "about1" => "YURTIMIZ VA DUNYO BO'YLAB UNITILMAS SARGUZASHTLARGA OTLANING",
+    "about2" => "Sifatli va maroqli sayohatni sifatli va ishonchli sayohat agentligi bilan rejalashtiring!!!",
 
 
 
-//  Gallery info
-    "galleryinfo" => "Bizning gallereyamiz",
+
+    "res" => "Restoranlar",
+    "res_t" => "Safar davomida siz dunyoning eng mashxur restoranlariga buyurtma berib,  oilaviy tashrif buyurishingiz va mazali taomlardan bahramand bo'lishingiz mumkin.",
+    "art1" => "San'at va madaniyat",
+    "art2" => "Sayohat qilishning eng - tashrif buyurgan manzillarning san'at va madaniyatini tomosha qilish va o'rganinshdan bahramand bo'ling va dunyo qarashingizni kengaytirish imkoniyatiga ega bo'ling. ",
+
+    //hotels
     "hotels" => "Mehmonxonalar",
+    "hotels1" => "Qulay va hamyonbop narxlarda dunyoga mashxur mehmonxonalarda hordiq chiqaring. ",
+    "hotels3" => "Xashamatli xonalar",
+    "hotels4" => "So'nngi texnologiyalar",
 
 
 
 
 //    Tours page
     "tours" => "Tur paketlar",
-
-//    Counter page
-    "counter1" => "Parvozni bron qilish",
-    "counter2" => "Ajoyib sayohat",
-    "counter3" => "Kruizlarni bron qilish",
-    "counter4" => "Chipta bron qilish",
 
 
 //    destination page
@@ -51,7 +56,6 @@ return[
 // conact
 
     "contact1" => "Kontaktlar",
-
 
 
 //    Hotel page
@@ -70,25 +74,19 @@ return[
 
 
 //    Testimonial page
-    'test_info' => "Mijozlarimiz biz haqimizda nima deyishadi",
-    'testmon' => "Mijozlarning Fikrlari",
-    "testinfo" => "Biz sizga eng yaxshi yo'nalishlarni taqdim etamiz. Hozir bron qiling va rohatlaning!",
-    "testcall" => "hoziroq qo'ng'iroq qiling",
-    "testcall1" => "Bizga qo'ng'iroq qiling, bu bepul.",
+    'test_info' => "Mijozlarimizning biz haqimizdagi fikrlar ",
 
 
 //    Contact page
-    "contactinfo" => "Bog'lanish",
+    "contactinfo" => "Sayohatga hoziroq buyurtma bering",
+    "schedule1" => "Dushanba-shanba  9:00-18:00",
     'name'=>"Ism",
-    'surname' => "Familya",
     'email' => "Elektron Manzil",
     'tel' => "Telefon",
-    'message' => "Habar Yo'llash",
-    'send' => "Yuborish",
     'category1' => "Tur paketni tanlang",
-    "data" => "sana.oy.yil",
     "location" => "Manzil",
     "contactp" => "Biz bilan bog'laning va dunyo bo'ylab sayohat qiling.",
+    "contactt" => "Biz bilan bog'laning",
 
 
 
@@ -98,8 +96,7 @@ return[
     "addres" => "Manzilimiz",
     "infolinks" => "Bizni ijtimoiy tarmoqdagi manzillarimizga quyidagi havolalar orqali kirishingiz mumkun",
     "menulinks" => "Bo'limlar",
-    "subscribe" => "Obuna boʻling",
-    "subsinfo" => "Sayohat va sayohatlar haqida xabardor bo'lish uchun oylik blog xatimizga obuna bo'ling",
-]
+
+    ]
 
 ?>
